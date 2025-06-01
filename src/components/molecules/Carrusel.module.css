@@ -1,0 +1,36 @@
+.carruselDescripcion {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  transform: translateY(-50%);
+  max-width: 45%;
+  color: white;
+  text-align: left;
+  z-index: 10;
+}
+
+.carruselDescripcionBoton {
+  margin-top: 1rem;
+}
+
+.carruselImagen {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.carruselTituloImagen {
+  max-width: 300px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .carruselDescripcion {
+    max-width: 90%;
+    top: 60%; 
+    left: 5%;
+  }
+  .carruselImagen {
+    height: 40vh;
+  }
+}

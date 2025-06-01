@@ -1,34 +1,56 @@
 import React from "react";
-import BotonVerSerie from "../atoms/BtnSerie";
-interface ItemCarruselMoleculaProps {
-  imagenSrc: string;
-  titulo: string;
-  descripcion: string;
-  activo: boolean;
+import styles from "./Carrusel.module.css"
+
+interface ItemCarruselProps {
+  imageUrl: string;
+  description: string;
+  buttonText: string;
+  isActive?: boolean; // Para manejar la clase active en el slide inicial
 }
 
-const ItemCarruselMolecula = ({ imagenSrc, titulo, descripcion, activo }: ItemCarruselMoleculaProps) => (
-  <div className={`carousel-item ${activo ? "active" : ""}`}>
-    <img
-      src={imagenSrc}
-      className="d-block w-100"
-      alt={titulo}
-      style={{ maxHeight: "600px", objectFit: "cover", filter: "brightness(0.7)" }}
-    />
+interface ItemCarruselMoleculaProps {
+  imagenFondo: string;
+  imagenTitulo: string;
+  descripcion: string;
+  id: string;
+  active?: boolean;
+}
+
+const ItemCarruselMolecula = ({
+  imagenFondo,
+  imagenTitulo,
+  descripcion,
+  id,
+  active = false,
+}: ItemCarruselMoleculaProps) => {
+  return (
     <div
-      className="carousel-caption d-flex flex-column justify-content-center align-items-start text-start"
-      style={{
-        bottom: "20%",
-        left: "5%",
-        maxWidth: "600px",
-        textShadow: "2px 2px 8px rgba(0,0,0,0.9)",
-      }}
+      className={`carousel-item ${active ? "active" : ""}`}
+      id={id}
     >
-      <h1 style={{ fontWeight: "bold", fontSize: "3rem" }}>{titulo}</h1>
-      <p style={{ fontSize: "1.2rem", marginBottom: "1.5rem" }}>{descripcion}</p>
-      <BotonVerSerie />
+      <img
+        src={imagenFondo}
+        className={`d-block w-100 ${styles.carruselImagen}`}
+        alt="Fondo del carrusel"
+      />
+      <div className={styles.carruselDescripcion}>
+        <img
+          src={imagenTitulo}
+          alt="Título de la serie"
+          className={styles.carruselTituloImagen}
+        />
+        <p className={styles.descripcionTexto}>
+          {descripcion.split("\n").map((linea, i) => (
+            <span key={i}>
+              {linea}
+              <br />
+            </span>
+          ))}
+        </p>
+        <button className="btn btn-primary mt-3" style={{backgroundColor:"rgba(50, 50, 50, 0.9)"}}>Ir a la serie</button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default ItemCarruselMolecula;
