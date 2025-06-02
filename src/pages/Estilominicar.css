@@ -1,0 +1,26 @@
+body {
+  background-color: #0c0c0c;
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal-gallery-container {
+  overflow-x: auto;
+}
+
+.horizontal-gallery {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scrollbar-width: none;
+}
+
+.horizontal-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.movie-card img {
+  display: block;
+  border-radius: 8px;
+}
