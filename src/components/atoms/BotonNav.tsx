@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./BotonNav.module.css"
+
 interface BotonAtomoProps {
   text: string;
   onClick: () => void;

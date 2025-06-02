@@ -1,13 +1,11 @@
-// src/components/atoms/PosterImage.tsx
 import React from "react";
 
-type Props = {
+type PosterImageProps = {
   src: string;
   alt?: string;
 };
 
-// PosterImage.tsx
-export default function PosterImage({ src, alt }: { src: string; alt?: string }) {
+ const PosterImage = ({ src, alt }: PosterImageProps) =>{
   return (
     <img
       src={src}
@@ -21,4 +19,4 @@ export default function PosterImage({ src, alt }: { src: string; alt?: string })
     />
   );
 }
-
+export default PosterImage;

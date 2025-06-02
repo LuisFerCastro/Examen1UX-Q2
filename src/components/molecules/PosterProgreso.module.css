@@ -1,0 +1,17 @@
+.posterContainer {
+  position: relative;
+  transition: border 0.3s;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.posterContainer:hover {
+  border: 2px solid white;
+}
+
+.posterImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
