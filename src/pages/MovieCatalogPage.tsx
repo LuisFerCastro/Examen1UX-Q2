@@ -3,7 +3,7 @@ import HorizontalGallery from "@/components/organismos/HorizontalGallery";
 
 
 const images = [
-  { src: "/images/RickandMorty.jpg", alt: "Película 1", badge: "Nuevo"},
+  { src: "/images/RickandMorty.jpg", alt: "Película 1", badge: "Nuevos Episodios"},
   { src: "/images/MiedoProfundo.jpg", alt: "Película 2" },
   { src: "/images/Hacks.jpg", alt: "Película 3",badge:"Nuevo Episodio" },
   { src: "/images/It.jpg", alt: "Película 4"  ,badge: "Se Va Pronto"},

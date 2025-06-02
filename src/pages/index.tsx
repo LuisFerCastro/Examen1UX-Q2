@@ -6,6 +6,9 @@ import CarruselOrganismo from "@/components/organismos/CarruselOrg";
 import MovieCatalogPage2 from "./MovieCatalogPage2";
 import MovieCatalogPage from "./MovieCatalogPage";
 import CatalogoContinuarV from "./CatalogoCV";
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home(){
   return (
@@ -26,6 +29,9 @@ export default function Home(){
 
         <React.StrictMode>
           <CatalogoContinuarV />
+        </React.StrictMode>
+        <React.StrictMode>
+          <App />
         </React.StrictMode>
       </div>
     </>
