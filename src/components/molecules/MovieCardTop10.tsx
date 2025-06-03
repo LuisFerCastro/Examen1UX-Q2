@@ -15,10 +15,10 @@ const MovieCardTop10: React.FC<MovieCardTop10Props> = ({ movie, index }) => (
   style={{
     fontSize: '6rem',
     fontWeight: 900,
-    color: '#555', // gris oscuro
+    color: '#555',
     marginRight: '15px',
     opacity: 1,
-    textShadow: '3px 3px 10px rgba(0, 0, 0, 0.9)', // sombra negra fuerte
+    textShadow: '3px 3px 10px rgba(0, 0, 0, 0.9)',
     lineHeight: 1,
     userSelect: 'none',
   }}

@@ -5,7 +5,7 @@ interface ItemCarruselProps {
   imageUrl: string;
   description: string;
   buttonText: string;
-  isActive?: boolean; // Para manejar la clase active en el slide inicial
+  isActive?: boolean;
 }
 
 interface ItemCarruselMoleculaProps {

@@ -22,7 +22,6 @@ export default function HorizontalGallery({ images }: Props) {
 
   return (
     <div style={{ position: "relative", padding: "24px 0" }}>
-      {/* Botón izquierda */}
       <button
         onClick={() => scroll("left")}
         style={{
@@ -41,8 +40,6 @@ export default function HorizontalGallery({ images }: Props) {
       >
         ‹
       </button>
-
-      {/* Contenedor scroll horizontal */}
       <div
         ref={scrollRef}
         style={{
@@ -50,10 +47,10 @@ export default function HorizontalGallery({ images }: Props) {
           display: "flex",
           gap: "16px",
           scrollBehavior: "smooth",
-          padding: "0 48px", // espacio para los botones
-          scrollbarWidth: "none", // Firefox
+          padding: "0 48px", 
+          scrollbarWidth: "none",
         }}
-        className="no-scrollbar" // Para ocultarlo con Tailwind si usas Tailwind
+        className="no-scrollbar"
       >
         {images.map((image, index) => (
           <MovieCard
@@ -65,7 +62,6 @@ export default function HorizontalGallery({ images }: Props) {
         ))}
       </div>
 
-      {/* Botón derecha */}
       <button
         onClick={() => scroll("right")}
         style={{
